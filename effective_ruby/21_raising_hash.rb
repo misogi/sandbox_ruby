@@ -19,4 +19,17 @@ class RaisingHash
     @hash.freeze
     super
   end
+  
+  def invert
+    other = self.class.new
+    other.replace!(@hash.invert)
+    other
+  end
+  
+  protected
+  
+  def replace!(hash)
+    hash.default_proc = @hash.default_proc
+    @hash = hash
+  end
 end
