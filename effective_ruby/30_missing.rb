@@ -17,15 +17,18 @@ class AuditDecorator
     @object = object
     @logger = Logger.new($stdout)
 
-    mod = Module.new do
-      # TODO: define here
+    object.public_methods.each do |name|
+      define_singleton_method(name) do |*args, &block|
+        @logger.info("calling #{name} on #{@object.inspect}")
+        @object.send(name, *args, &block)
+      end
     end
   end
 
   private
 
   def method_missing(name, *args, &block)
-    @logger.info("calling #{name} on #{@object.inspect}")
+    @logger.info("OLD: calling #{name} on #{@object.inspect}")
     @object.send(name, *args, &block)
   end
 end
