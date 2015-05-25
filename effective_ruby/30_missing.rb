@@ -10,6 +10,10 @@ class HashProxy
   def initialize
     @hash = {}
   end
+
+  def respond_to_missing? (name, include_private)
+    @hash.respond_to?(name, include_private) || super
+  end
 end
 
 class AuditDecorator
