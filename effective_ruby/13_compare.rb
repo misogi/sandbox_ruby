@@ -1,4 +1,13 @@
 require 'pp'
+
+
+# Repres
+#
+# * Major num (1 in +1.2.3+)
+#
+# Example:
+#   v = Version.new('10.9.16')
+
 class Version
   include Comparable
   alias_method :eql?, :==
