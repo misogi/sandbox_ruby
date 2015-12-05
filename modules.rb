@@ -2,6 +2,18 @@ module A
   def self.a_method
      'hello'
    end
+
+  def self.included(other)
+    puts "#{other} にインクルードされた"
+  end
+
+  def self.prepended(other)
+    puts "#{other} にプリペン度された"
+  end
+
+  def self.method_added(method)
+    puts "あたらしい #{method} メソッド"
+  end
 end
 
 module B
@@ -23,8 +35,11 @@ class MyClass
   end
 end
 
+def A.mymy_method; end
+
 class YouClass
   include B
+  prepend A
   include A
 end
 
