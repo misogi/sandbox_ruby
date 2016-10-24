@@ -14,5 +14,5 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
-//= require riot.min
+//= require riotcompiler.min
 //= require_tree .
