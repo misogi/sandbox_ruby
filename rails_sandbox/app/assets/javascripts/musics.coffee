@@ -4,3 +4,6 @@
 
 @hello = () ->
   riot.mount('todo', {title: "hello!!"})
+
+good = () ->
+  console.log('hoge')
