@@ -2,4 +2,6 @@ class @Hello
   good = () ->
     alert('hey')
   @notgood = () ->
-    alert('not good')
+    box = document.getElementById('box')
+    box.innerHtml = 'hey'
+    $(box).html('hou')
