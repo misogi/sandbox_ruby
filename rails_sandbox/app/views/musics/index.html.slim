@@ -10,6 +10,7 @@ table
   tbody
     - @musics.each do |music|
       tr
+        td = image_tag music.image_url, width: 70 if music.image
         td = link_to 'Show', music
         td = link_to 'Edit', edit_music_path(music)
         td = link_to 'Destroy', music, data: { confirm: 'Are you sure?' }, method: :delete

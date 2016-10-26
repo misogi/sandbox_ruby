@@ -6,4 +6,7 @@
         - @music.errors.full_messages.each do |message|
           li = message
 
+  = f.hidden_field :image, value: @music.cached_image_data, id: 'hidden_music_image'
+  = f.file_field :image
+
   .actions = f.submit

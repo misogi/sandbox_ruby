@@ -1,5 +1,6 @@
 p#notice = notice
 
+= image_tag @music.image_url, width: 150 if @music.image
 
 = link_to 'Edit', edit_music_path(@music)
 '|
