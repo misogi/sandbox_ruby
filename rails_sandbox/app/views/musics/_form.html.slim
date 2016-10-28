@@ -1,4 +1,4 @@
-= form_for @music do |f|
+= simple_form_for @music do |f|
   - if @music.errors.any?
     #error_explanation
       h2 = "#{pluralize(@music.errors.count, "error")} prohibited this music from being saved:"
@@ -6,7 +6,8 @@
         - @music.errors.full_messages.each do |message|
           li = message
 
-  = f.hidden_field :image, value: @music.cached_image_data, id: 'hidden_music_image'
-  = f.file_field :image
+  = f.input_field :image, value: @music.cached_image_data, as: :hidden
+  = f.input :image, as: :file
+  = f.input :title
 
   .actions = f.submit
