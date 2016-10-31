@@ -2,6 +2,7 @@ p#notice = notice
 
 = image_tag @music.image_url, width: 150 if @music.image
 
-= link_to 'Edit', edit_music_path(@music)
-'|
-= link_to 'Back', musics_path
+.color-box
+  = link_to 'Edit', edit_music_path(@music)
+  '|
+  = link_to 'Back', musics_path
