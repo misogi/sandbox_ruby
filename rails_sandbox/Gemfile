@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
+gem 'compass-rails'
 gem 'slim-rails'
 gem 'react-rails'
 
