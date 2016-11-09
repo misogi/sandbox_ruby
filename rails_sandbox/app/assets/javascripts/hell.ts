@@ -5,4 +5,4 @@ class Hell {
 };
 
 const hell = new Hell();
-console.log(hell.count(3));
+console.log(Hell.count(3));
