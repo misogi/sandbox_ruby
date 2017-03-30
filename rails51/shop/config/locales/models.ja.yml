@@ -1,0 +1,5 @@
+ja:
+  activerecord:
+    attributes:
+      person:
+        age: 年齢
